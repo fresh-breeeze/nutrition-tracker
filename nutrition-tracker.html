@@ -582,7 +582,7 @@ body {
 // КОНФИГУРАЦИЯ GROQ AI
 // ══════════════════════════════════════════════
 
-const OR_KEY = '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';
+const OR_KEY = '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';
 
 async function callGroq(prompt) {
   const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -594,7 +594,7 @@ async function callGroq(prompt) {
       'X-Title': 'KBZHU Tracker'
     },
     body: JSON.stringify({
-      model: 'openrouter/auto',
+      model: 'meta-llama/llama-3.2-3b-instruct:free',
       messages: [
         { role: 'system', content: 'Ты диетолог. Отвечай ТОЛЬКО валидным JSON без markdown и лишнего текста.' },
         { role: 'user', content: prompt }
